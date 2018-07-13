@@ -1,0 +1,58 @@
+.con23 {
+  background: grey;
+  border-radius: 5px;
+  padding: 30px;
+}
+
+.navbar-brand {
+  background-color: rgb(255, 193, 112);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.nav-link {
+  background-color: rgb(255, 193, 112);
+  padding: 10px;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.nav-link:hover {
+  background-color: white;
+  color: rgb(255, 193, 112);
+}
+
+.display-3 {
+  color: rgb(255, 193, 112);
+}
+
+.answerchoice {
+  border: 2px solid rgb(255, 193, 112);
+  border-radius: 8px;
+  color: rgb(255, 193, 112);
+  padding: 10px;
+  text-align: center;
+  display: inline-block;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+}
+
+.answerchoice:hover {
+  background-color: rgb(255, 193, 112);
+  color: white;
+}
+
+#startButton {
+  border: 2px solid rgb(255, 193, 112);
+  border-radius: 8px;
+  color: rgb(255, 193, 112);
+  padding: 10px;
+  text-align: center;
+  display: inline-block;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+}
+#startButton:hover {
+  background-color: rgb(255, 193, 112);
+  color: white;
+}
