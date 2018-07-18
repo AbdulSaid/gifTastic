@@ -75,7 +75,7 @@ $(document).ready(function() {
     var queryURL =
       'https://api.giphy.com/v1/gifs/search?q=' +
       animal +
-      '&api_key=GhQ2S6VWefM1pAVPgzvN3ryOC3cvcBkM&limit5';
+      '&api_key=GhQ2S6VWefM1pAVPgzvN3ryOC3cvcBkM&limit=10';
 
     $.ajax({
       url: queryURL,
@@ -83,6 +83,7 @@ $(document).ready(function() {
     }).then(function(response) {
       var results = response.data;
       console.log(response.data);
+      $('#gifs-appear-here').empty();
 
       for (var i = 0; i < results.length; i++) {
         var gifDiv = $("<div class='item'>");
