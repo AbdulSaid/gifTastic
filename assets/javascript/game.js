@@ -1,4 +1,34 @@
 $(document).ready(function() {
+  var topics = [
+    'dog',
+    'cat',
+    'hamster',
+    'skunk',
+    'gold fish',
+    'bird',
+    'ferret',
+    'turtle',
+    'sugar glider',
+    'chinchilla',
+    'hedgehog',
+    'hermit crab',
+    'gerbil',
+    'pygmy goat',
+    'chicken',
+    'capybara',
+    'teacup pig',
+    'serval',
+    'salamander',
+    'frog'
+  ];
+
+  for (var i = 0; i < topics.length; i++) {
+    var topicButton = $('<button>');
+    topicButton.attr('data-animal', topics[i]);
+    topicButton.text(topics[i]);
+    $('#topics').append(topicButton);
+  }
+
   $('button').on('click', function() {
     var animal = $(this).attr('data-animal');
     var queryURL =
