@@ -41,3 +41,23 @@ button:hover {
   background-color: rgb(255, 193, 112);
   color: white;
 }
+
+#add-topic {
+  border: 2px solid rgb(255, 112, 112);
+  border-radius: 8px;
+  color: rgb(255, 193, 112);
+  padding: 5px;
+  text-align: center;
+  display: inline-block;
+  margin: 1px 1px;
+  transition-duration: 0.4s;
+}
+
+#add-topic:hover {
+  background-color: rgb(255, 112, 112);
+  color: white;
+}
+
+#topic-form {
+  font-size: 14px;
+}
