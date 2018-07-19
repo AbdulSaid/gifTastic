@@ -44,35 +44,19 @@ $(document).ready(function() {
   }
 
   // This function handles events where one button is clicked
-  $('#add-topic').on('click', function(event) {
-    // event.preventDefault() prevents the form from trying to submit itself.
-    // We're using a form so that the user can hit enter instead of clicking the button if they want
-    event.preventDefault();
-
-    // This line will grab the text from the input box
-    var topic = $('#topic-input')
-      .val()
-      .trim();
-
-    // The animal from the textbox is then added to our array
-    topics.push(topic);
-    console.log(topics);
-
-    // calling renderButtons which handles the processing of our movie array
-    renderButtons();
-  });
 
   // Calling the renderButtons function at least once to display the initial list of movies
   renderButtons();
 
-  // for (var i = 0; i < topics.length; i++) {
-  //   var topicButton = $('<button>');
-  //   topicButton.attr('data-animal', topics[i]);
-  //   topicButton.text(topics[i]);
-  //   $('#topics').append(topicButton);
-  // }
+  /*
+  function handleSubmit() {
+    
+  }*/
 
-  $('button').on('click', function() {
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log('clicked');
+
     var animal = $(this).attr('data-animal');
     console.log(this);
     var queryURL =
@@ -90,7 +74,7 @@ $(document).ready(function() {
 
       for (var i = 0; i < results.length; i++) {
         var gifDiv = $('<div>');
-
+        // gifDiv.addClass('d-flex flex-wrap');
         var rating = results[i].rating;
 
         var p = $('<p>').text('Rating: ' + rating);
@@ -121,6 +105,26 @@ $(document).ready(function() {
         });
       }
     });
+  }
+
+  $('#topics').on('click', 'button', handleSubmit);
+
+  $('form').on('submit', function(event) {
+    // event.preventDefault() prevents the form from trying to submit itself.
+    // We're using a form so that the user can hit enter instead of clicking the button if they want
+    event.preventDefault();
+
+    // This line will grab the text from the input box
+    var topic = $('#topic-input')
+      .val()
+      .trim();
+
+    // The animal from the textbox is then added to our array
+    topics.push(topic);
+    console.log(topics);
+
+    // calling renderButtons which handles the processing of our movie array
+    renderButtons();
   });
 });
 
