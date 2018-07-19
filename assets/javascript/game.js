@@ -53,8 +53,10 @@ $(document).ready(function() {
     var topic = $('#topic-input')
       .val()
       .trim();
+
     // The animal from the textbox is then added to our array
     topics.push(topic);
+    console.log(topics);
 
     // calling renderButtons which handles the processing of our movie array
     renderButtons();
@@ -72,6 +74,7 @@ $(document).ready(function() {
 
   $('button').on('click', function() {
     var animal = $(this).attr('data-animal');
+    console.log(this);
     var queryURL =
       'https://api.giphy.com/v1/gifs/search?q=' +
       animal +
